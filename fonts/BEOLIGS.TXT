@@ -1,0 +1,84 @@
+REM ------------------------------------------------------------------
+REM This macro for Word for Windows 6.0 inserts ligatures and
+REM ligature-like combinations in files that use the Beowulf-1 font.
+REM It probably should not be altered, since the order of the replace
+REM operations is important.
+REM ------------------------------------------------------------------
+
+Sub MAIN
+REM Turn off screen to speed up macro.
+ScreenUpdating 0
+REM ------------------------------------------------------------------
+REM The next line assumes that everything in the file is in Beowulf-1.
+REM If there are other fonts in the file, comment out the line and
+REM copy the "EditFindFont" statement from below.
+REM ------------------------------------------------------------------
+EditFindClearFormatting
+EditReplaceClearFormatting
+REM ------------------------------------------------------------------
+REM The # character in Beowulf-1 is an alternate shape of ð, designed
+REM to form ligatures with certain preceding characters.
+REM ------------------------------------------------------------------
+EditReplace .Find = "bð", .Replace = "b#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "cð", .Replace = "c#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "fð", .Replace = "f#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "hð", .Replace = "h#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "ið", .Replace = "i#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "mð", .Replace = "m#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "nð", .Replace = "n#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "oð", .Replace = "o#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "pð", .Replace = "p#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "rð", .Replace = "r#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "sð", .Replace = "s#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "uð", .Replace = "u#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "wð", .Replace = "w#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "xð", .Replace = "x#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "yð", .Replace = "y#", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "#ð", .Replace = "ðð", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+REM ------------------------------------------------------------------
+REM Now replace certain letter-combinations with ligatures from
+REM Beowulf-1-Alt. First set up the font to find and the one to
+REM replace.
+REM ------------------------------------------------------------------
+EditFindFont .Points = "", .Underline = - 1, .Color = - 1, .Strikethrough = - 1, .Superscript = - 1, .Subscript = - 1, .Hidden = - 1, .SmallCaps = - 1, .AllCaps = - 1, .Spacing = "", .Position = "", .Kerning = - 1, .KerningMin = "", .Tab = "0", .Font = "Beowulf-1", .Bold = - 1, .Italic = - 1
+EditReplaceFont .Points = "", .Underline = - 1, .Color = - 1, .Strikethrough = - 1, .Superscript = - 1, .Subscript = - 1, .Hidden = - 1, .SmallCaps = - 1, .AllCaps = - 1, .Spacing = "", .Position = "", .Kerning = - 1, .KerningMin = "", .Tab = "0", .Font = "Beowulf-1-Alt", .Bold = - 1, .Italic = - 1
+EditReplace .Find = "ðð", .Replace = "ð", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ea", .Replace = "a", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ec", .Replace = "c", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ef", .Replace = "f", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "eg", .Replace = "h", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "em", .Replace = "m", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "en", .Replace = "n", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "eo", .Replace = "o", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ep", .Replace = "p", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "er", .Replace = "r", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "es", .Replace = "s", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "et", .Replace = "t", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ew", .Replace = "v", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "éa", .Replace = "á", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "éo", .Replace = "ó", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ëa", .Replace = "ä", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ëo", .Replace = "ö", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æc", .Replace = "C", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æf", .Replace = "F", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æg", .Replace = "H", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æm", .Replace = "M", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æn", .Replace = "N", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æp", .Replace = "P", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ær", .Replace = "R", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æs", .Replace = "S", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æt", .Replace = "T", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "æw", .Replace = "V", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+REM ------------------------------------------------------------------
+REM Now we are putting in s-ligatures, which are in the Beowulf-1 font.
+REM Since there is now more than one font in the document, we must look
+REM only for Beowulf-1; the next line means we will be replacing with
+REM Beowulf-1, not Beowulf-1-Alt.
+REM ------------------------------------------------------------------
+EditReplaceClearFormatting
+EditReplace .Find = "ßß", .Replace = "{", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ßl", .Replace = "|", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ßh", .Replace = "}", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "ßk", .Replace = "~", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+ScreenUpdating 1
+End Sub

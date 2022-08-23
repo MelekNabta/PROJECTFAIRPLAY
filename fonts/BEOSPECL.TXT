@@ -1,0 +1,33 @@
+REM ------------------------------------------------------------------
+REM This macro, for Microsoft Word for Windows version 6.0, changes
+REM a file using the Beowulf-1 font in the following ways:
+REM     -- Replace "and" with nota
+REM     -- Replace "þæt" with crossed thorn
+REM     -- Replace initial y (except in word "ys") with alternate y
+REM     -- Replace initial g with alternate g
+REM     -- Replace initial and internal s with high s (final s is low
+REM        s)
+REM These changes are matters of taste, not necessity. Users are
+REM encouraged to play with this macro or make others to come up with
+REM configurations that please them.
+REM ------------------------------------------------------------------
+
+Sub MAIN
+ScreenUpdating 0
+EditFindClearFormatting
+EditReplaceClearFormatting
+EditReplace .Find = "and", .Replace = "&", .Direction = 0, .MatchCase = 1, .WholeWord = 1, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "þæt", .Replace = "$", .Direction = 0, .MatchCase = 1, .WholeWord = 1, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "ys", .Replace = "û", .Direction = 0, .MatchCase = 1, .WholeWord = 1, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditFindFont .Points = "", .Underline = - 1, .Color = - 1, .Strikethrough = - 1, .Superscript = - 1, .Subscript = - 1, .Hidden = - 1, .SmallCaps = - 1, .AllCaps = - 1, .Spacing = "", .Position = "", .Kerning = - 1, .KerningMin = "", .Tab = "0", .Font = "Beowulf-1", .Bold = - 1, .Italic = - 1
+EditReplaceFont .Points = "", .Underline = - 1, .Color = - 1, .Strikethrough = - 1, .Superscript = - 1, .Subscript = - 1, .Hidden = - 1, .SmallCaps = - 1, .AllCaps = - 1, .Spacing = "", .Position = "", .Kerning = - 1, .KerningMin = "", .Tab = "0", .Font = "Beowulf-1-Alt", .Bold = - 1, .Italic = - 1
+EditReplace .Find = "<g", .Replace = "g", .Direction = 0, .MatchCase = 0, .WholeWord = 0, .PatternMatch = 1, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditReplace .Find = "<y", .Replace = "Y", .Direction = 0, .MatchCase = 0, .WholeWord = 0, .PatternMatch = 1, .SoundsLike = 0, .ReplaceAll, .Format = 1, .Wrap = 1
+EditFindClearFormatting
+EditReplaceClearFormatting
+EditReplace .Find = "û", .Replace = "ys", .Direction = 0, .MatchCase = 1, .WholeWord = 1, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "s>", .Replace = "û", .Direction = 0, .MatchCase = 0, .WholeWord = 0, .PatternMatch = 1, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "s", .Replace = "ß", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+EditReplace .Find = "û", .Replace = "s", .Direction = 0, .MatchCase = 1, .WholeWord = 0, .PatternMatch = 0, .SoundsLike = 0, .ReplaceAll, .Format = 0, .Wrap = 1
+ScreenUpdating 1
+End Sub
