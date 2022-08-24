@@ -12,6 +12,25 @@ body{
     background-color: #ffffff;
     height: 73px;
 }
+.Zina {
+    font-family:Nunito;
+    font-size: 15px;
+    line-height: 30px;
+    color: #ababab;
+    cursor: pointer;
+    margin: 10px;
+    display: block;
+    }
+    .Zina:hover {
+        color: indigo;
+    }
+    
+    .GZ7 {
+        position: relative;
+    }
+    .GZ7:hover .minilist {
+        display: flex;
+    }
 .logo {
     height: 25px;
     width: 20.31px;
@@ -43,4 +62,62 @@ body{
     font-family: Nunito;
     font-weight: 900;
     color: indigo;
+    font-size: 40px;
+}
+.box1 {
+    border: 1px solid rgb(179, 154, 183);
+    background-color:rgb(179, 154, 183);
+    border-radius: 10px;
+    padding: 15px;
+
+}
+.minilist {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    margin-left: -150px;
+    justify-content:left;
+    box-shadow: -7px 8px 24px 0px rgba(110,99,99,0.69);
+    -webkit-box-shadow: -7px 8px 24px 0px rgba(110,99,99,0.69);
+    -moz-box-shadow: -7px 8px 24px 0px rgba(110,99,99,0.69);
+    padding: 5px;
+}
+.ZinaMinilist {
+    color: black;
+    background-color:#ffffff;
+    height: 42px;
+    width: 220px;
+    padding: 12px 16px 12px 16px;
+}
+.ZinaMinilist:hover {
+    color: indigo;
+}
+.PhtDsh {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.formPht {
+    height: 200px;
+    width: 200px;
+}
+.Dsrt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.formDsrt {
+    height: 200px;
+    width: 200px;
+}
+.BevPht {
+    height: 200px;
+    width: 120px;
+}
+.Bev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
