@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap');
+
 body {
 
 background: #1f1a25;
@@ -94,3 +95,4 @@ span{
 
 position: relative;
 }
+

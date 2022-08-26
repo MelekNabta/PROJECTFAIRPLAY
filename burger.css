@@ -1,0 +1,68 @@
+body{
+    margin:0 180px;
+}
+.position {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    /* position: fixed; */
+    width: 100%;
+    background-color: #ffffff;
+    height: 73px;
+}
+.Zina {
+    font-family:Nunito;
+    font-size: 15px;
+    line-height: 30px;
+    color: #ababab;
+    cursor: pointer;
+    margin: 10px;
+    display: block;
+    }
+    .Zina:hover {
+        color: indigo;
+    }
+    
+    .GZ7 {
+        position: relative;
+    }
+    .GZ7:hover .minilist {
+        display: flex;
+    }
+.logo {
+    height: 25px;
+    width: 20.31px;
+}
+.pos {
+    display: flex;
+    align-items: center;
+}
+.fontlogo {
+    font-family:Newsreader;
+    font-style: italic;
+    font-size: large;
+}
+
+
+.btnhome{
+    border: 1px solid rgb(179, 154, 183);
+    background-color:rgb(179, 154, 183);
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    padding: 30px;
+text-decoration: none;
+}
+.mise {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:600px){
+    body{
+        margin:0 30px;
+    }
+
+
+}

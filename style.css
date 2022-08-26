@@ -83,6 +83,7 @@ body{
     -webkit-box-shadow: -7px 8px 24px 0px rgba(110,99,99,0.69);
     -moz-box-shadow: -7px 8px 24px 0px rgba(110,99,99,0.69);
     padding: 5px;
+    
 }
 .ZinaMinilist {
     color: black;
@@ -90,6 +91,8 @@ body{
     height: 42px;
     width: 220px;
     padding: 12px 16px 12px 16px;
+    display: inline;
+    margin-right: 20px;
 }
 .ZinaMinilist:hover {
     color: indigo;
@@ -121,3 +124,134 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+img, #parent {
+cursor: pointer;
+
+}
+.card:hover > img{
+opacity:1;
+transform: scale(1.2);
+}
+.instagram {
+    height: 50px;
+    width: 50px;
+}
+
+img, #parent {
+cursor: pointer;
+
+}
+.card:hover > img{
+opacity:1;
+transform: scale(1.2);
+}
+.facebook {
+    height: 50px;
+    width: 50px;
+}
+
+img, #parent {
+cursor: pointer;
+
+}
+.card:hover > img{
+opacity:1;
+transform: scale(1.2);
+}
+.tiktok {
+    height: 50px;
+    width: 50px;
+}
+.Social {
+    display: flex;
+    justify-content: space-between;
+}
+.city {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tswr {
+    height: 240px;
+    width: 320px;
+}
+.pol {
+    font-family:Roboto;
+    padding-left: 5px;
+}
+.SM {
+    display: flex;
+}
+
+/* .TopPage{
+    border: 1px solid rgb(179, 154, 183);
+    background-color:rgb(179, 154, 183);
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    text-decoration: none;
+    font-family:Roboto;
+} */
+
+@media screen and (max-width:600px){
+    body{
+        margin:0 30px;
+    }
+
+
+}
+.card {
+    margin: 40px;
+    position: relative;
+    max-width: 250px;
+    max-height: 350px;
+    box-shadow: 0 40px 60px -6px black;
+  }
+  
+  .card-title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #6184a8;
+    padding: 2%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+  }
+  
+  .card-desc {
+    display: block;
+    font-size: 1.2rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: white;
+    overflow-y: scroll;
+    transition: 0.8s ease;
+  }
+  
+  .card:hover .card-desc {
+    opacity: 1;
+    height: 100%;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin: 40px 0 20px 0;
+    text-align: center;
+  }
+    
